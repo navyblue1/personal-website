@@ -1,16 +1,15 @@
 # Personal website
 
-A lightweight personal portfolio built with HTML, CSS, and JavaScript. It has no dependencies or
-build step and is ready to deploy to Vercel.
+A distinctive personal portfolio for Navyblue, built with HTML, CSS, and JavaScript. It has no
+dependencies or build step and is deployed to Vercel.
 
 ## Personalize it
 
 Open `index.html` and replace:
 
-- The name, introduction, and About copy
-- Both `hello@example.com` email links
-- The three sample projects and their `href="#"` links
-- The LinkedIn and GitHub profile URLs
+- The introduction and profile copy
+- The three practice areas
+- The email and GitHub profile URLs
 - The page title and description in the `<head>`
 
 Colors, spacing, and typography live in `styles.css`. The main palette is defined at the top using

@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Jeffrey's personal portfolio: selected work, background, and contact information."
+      content="Navyblue is Jeffrey's personal site: quantitative thinking, digital craft, and selected directions in markets, code, and design."
     />
-    <meta name="theme-color" content="#f4efe6" />
-    <meta property="og:title" content="Jeffrey | Personal Portfolio" />
+    <meta name="theme-color" content="#061225" />
+    <meta property="og:title" content="Navyblue | Jeffrey" />
     <meta
       property="og:description"
-      content="A personal portfolio about thoughtful work, useful ideas, and things built with care."
+      content="Quantitative thinking. Digital craft. Work at the intersection of markets, code, and design."
     />
     <meta property="og:type" content="website" />
-    <title>Jeffrey | Personal Portfolio</title>
+    <title>Navyblue | Jeffrey</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
@@ -28,181 +28,225 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header" aria-label="Main navigation">
-      <a class="wordmark" href="#top" aria-label="Jeffrey, back to top">J<span>.</span></a>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Navyblue, back to top">
+        <span class="wordmark-mark" aria-hidden="true">N/</span>
+        <span>Navyblue</span>
+      </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
+        <a href="#profile">Profile</a>
+        <a href="#practice">Practice</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
-        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"></circle>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
-        </svg>
-        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"></path>
-        </svg>
-      </button>
+      <div class="header-meta">
+        <span class="availability"><i></i> Open to ideas</span>
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+          <span class="theme-label">Light</span>
+          <span class="toggle-track" aria-hidden="true"><i></i></span>
+        </button>
+      </div>
     </header>
 
     <main id="main">
       <section class="hero" id="top">
+        <div class="hero-index" aria-hidden="true">
+          <span>NB / 001</span>
+          <span>TORONTO</span>
+          <span>43.65 N</span>
+        </div>
+
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="status-dot"></span> Available for interesting work</p>
-          <h1>I turn curious ideas into <br class="mobile-break" aria-hidden="true" /><em>useful</em> things.</h1>
-          <p class="hero-intro">
-            I’m Jeffrey, a builder and problem solver focused on making digital experiences that
-            feel clear, human, and quietly excellent.
+          <p class="kicker">Jeffrey / quantitative builder</p>
+          <h1>
+            I find the<br />
+            <span class="headline-shift">signal</span> in noise.
+          </h1>
+          <div class="hero-summary">
+            <p>
+              I work where markets, code, and design overlap: turning complex information into
+              systems people can understand and use.
+            </p>
+            <a class="primary-link" href="#practice">
+              Explore my practice <span aria-hidden="true">&darr;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="signal-stage reveal" aria-label="Interactive signal field">
+          <div class="signal-header">
+            <span>LIVE SIGNAL FIELD</span>
+            <span id="local-time">--:--:-- EST</span>
+          </div>
+          <div class="signal-grid" id="signal-grid" aria-hidden="true"></div>
+          <div class="signal-crosshair" aria-hidden="true">
+            <span class="crosshair-x"></span>
+            <span class="crosshair-y"></span>
+            <i></i>
+          </div>
+          <div class="signal-readout">
+            <span>X <b id="coord-x">042</b></span>
+            <span>Y <b id="coord-y">071</b></span>
+            <span>CONF <b id="confidence">88.4%</b></span>
+          </div>
+          <p class="signal-caption">Move through the field to inspect the signal.</p>
+        </div>
+
+        <a class="hero-contact" href="mailto:zhangzhirui1224@gmail.com">
+          Start a conversation <span aria-hidden="true">&nearr;</span>
+        </a>
+      </section>
+
+      <section class="ticker" aria-label="Areas of practice">
+        <div class="ticker-track">
+          <span>QUANTITATIVE RESEARCH</span><i>+</i><span>MARKET SYSTEMS</span><i>+</i>
+          <span>DECISION INTERFACES</span><i>+</i><span>WEB EXPERIMENTS</span><i>+</i>
+          <span aria-hidden="true">QUANTITATIVE RESEARCH</span><i aria-hidden="true">+</i>
+          <span aria-hidden="true">MARKET SYSTEMS</span><i aria-hidden="true">+</i>
+          <span aria-hidden="true">DECISION INTERFACES</span><i aria-hidden="true">+</i>
+          <span aria-hidden="true">WEB EXPERIMENTS</span><i aria-hidden="true">+</i>
+        </div>
+      </section>
+
+      <section class="profile section-wrap" id="profile">
+        <div class="section-rail reveal">
+          <p>PROFILE</p>
+          <span>A way of working</span>
+        </div>
+        <div class="profile-body">
+          <p class="profile-statement reveal">
+            Good decisions begin with a clear view of what matters. I combine analytical rigor
+            with visual judgment to make that view easier to reach.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">See my work <span aria-hidden="true">↘</span></a>
-            <a class="text-link" href="mailto:hello@example.com">hello@example.com <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal" aria-hidden="true">
-          <div class="orb orb-one"></div>
-          <div class="orb orb-two"></div>
-          <div class="visual-card card-back">
-            <span>Currently exploring</span>
-            <strong>Design × Technology</strong>
-          </div>
-          <div class="visual-card card-front">
-            <div class="card-grid"></div>
-            <p>Make it simple.</p>
-            <p>Make it matter.</p>
-            <span class="card-number">01</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="marquee" aria-label="Areas of interest">
-        <div class="marquee-track">
-          <span>Product Thinking</span><i>✦</i><span>Creative Development</span><i>✦</i>
-          <span>Data &amp; Insights</span><i>✦</i><span>Visual Design</span><i>✦</i>
-          <span aria-hidden="true">Product Thinking</span><i aria-hidden="true">✦</i>
-          <span aria-hidden="true">Creative Development</span><i aria-hidden="true">✦</i>
-          <span aria-hidden="true">Data &amp; Insights</span><i aria-hidden="true">✦</i>
-          <span aria-hidden="true">Visual Design</span><i aria-hidden="true">✦</i>
-        </div>
-      </section>
-
-      <section class="about section-shell" id="about">
-        <div class="section-label reveal">
-          <span>01</span>
-          <p>About</p>
-        </div>
-        <div class="about-content reveal">
-          <h2>Good work starts with paying attention.</h2>
-          <div class="about-columns">
+          <div class="profile-detail reveal">
             <p>
-              I enjoy finding the shape inside a messy problem, then building something that makes
-              the answer feel obvious. My approach blends analytical thinking with a strong eye for
-              detail.
+              My instinct is to look beneath the surface: test the premise, trace the pattern, and
+              reduce a complicated problem to its useful core. Then I build the tool, model, or
+              interface that makes the answer legible.
             </p>
             <p>
-              Away from the screen, I’m usually learning a new subject, collecting references, or
-              following an idea a little further than strictly necessary.
+              I care about the full distance between an idea and its final form. Logic should be
+              sound. Language should be precise. Details should earn their place.
             </p>
           </div>
-          <div class="principles" aria-label="Working principles">
-            <div><span>01</span><strong>Clarity over noise</strong></div>
-            <div><span>02</span><strong>Curiosity as a method</strong></div>
-            <div><span>03</span><strong>Care in the details</strong></div>
+          <div class="working-code reveal" aria-label="Working principles">
+            <p class="working-code-label">OPERATING PRINCIPLES</p>
+            <div><span>INPUT</span><strong>Question the obvious</strong></div>
+            <div><span>PROCESS</span><strong>Structure the uncertainty</strong></div>
+            <div><span>OUTPUT</span><strong>Make the answer usable</strong></div>
           </div>
         </div>
       </section>
 
-      <section class="work section-shell" id="work">
-        <div class="section-label reveal">
-          <span>02</span>
-          <p>Selected work</p>
-        </div>
-        <div class="work-content">
-          <div class="section-heading reveal">
-            <h2>A few things I’ve worked on.</h2>
-            <p>Replace these starter projects with your own work, writing, or experiments.</p>
+      <section class="practice" id="practice">
+        <div class="practice-heading section-wrap reveal">
+          <div class="section-rail">
+            <p>PRACTICE</p>
+            <span>Where I focus</span>
           </div>
+          <div>
+            <p class="kicker">Current working range</p>
+            <h2>Three ways I turn information into leverage.</h2>
+          </div>
+        </div>
 
-          <div class="project-list">
-            <article class="project reveal">
-              <a class="project-visual project-coral" href="#" aria-label="View Signal project">
-                <div class="project-window">
-                  <div class="window-bar"><span></span><span></span><span></span></div>
-                  <div class="signal-layout">
-                    <div class="signal-sidebar"></div>
-                    <div class="signal-chart">
-                      <span style="--height: 42%"></span><span style="--height: 68%"></span>
-                      <span style="--height: 51%"></span><span style="--height: 82%"></span>
-                      <span style="--height: 64%"></span><span style="--height: 92%"></span>
-                    </div>
+        <div class="practice-list">
+          <article class="practice-card reveal">
+            <div class="card-topline"><span>MARKETS / RESEARCH</span><span>01</span></div>
+            <div class="market-visual" aria-hidden="true">
+              <svg viewBox="0 0 700 300" preserveAspectRatio="none">
+                <path class="chart-area" d="M0,245 C55,232 72,245 114,205 C152,169 173,204 215,164 C260,121 281,154 325,114 C365,78 392,109 431,73 C475,32 512,69 551,42 C602,8 642,54 700,20 L700,300 L0,300 Z"></path>
+                <path class="chart-line" d="M0,245 C55,232 72,245 114,205 C152,169 173,204 215,164 C260,121 281,154 325,114 C365,78 392,109 431,73 C475,32 512,69 551,42 C602,8 642,54 700,20"></path>
+              </svg>
+              <div class="chart-axis"><span>09:30</span><span>12:00</span><span>16:00</span></div>
+              <span class="chart-tag">+18.42%</span>
+            </div>
+            <div class="card-copy">
+              <h3>Market systems</h3>
+              <p>
+                Research workflows, analytical models, and focused tools for seeing price,
+                behavior, and risk more clearly.
+              </p>
+            </div>
+          </article>
+
+          <article class="practice-card reveal">
+            <div class="card-topline"><span>PRODUCT / INTERFACE</span><span>02</span></div>
+            <div class="interface-visual" aria-hidden="true">
+              <div class="interface-nav"><i></i><i></i><i></i><span>NAVY / CONSOLE</span></div>
+              <div class="interface-layout">
+                <div class="interface-list">
+                  <span class="is-active"></span><span></span><span></span><span></span>
+                </div>
+                <div class="interface-main">
+                  <div class="interface-value">84.26</div>
+                  <div class="interface-bars">
+                    <i style="--h: 30%"></i><i style="--h: 47%"></i><i style="--h: 39%"></i>
+                    <i style="--h: 68%"></i><i style="--h: 58%"></i><i style="--h: 88%"></i>
                   </div>
                 </div>
-              </a>
-              <div class="project-copy">
-                <div>
-                  <p class="project-type">Data product · 2026</p>
-                  <h3>Signal</h3>
-                  <p>A focused dashboard that turns complex information into confident decisions.</p>
-                </div>
-                <a class="circle-link" href="#" aria-label="View Signal project"><span>↗</span></a>
               </div>
-            </article>
+            </div>
+            <div class="card-copy">
+              <h3>Decision interfaces</h3>
+              <p>
+                Calm dashboards and digital products that reveal hierarchy, reduce friction, and
+                help people act with confidence.
+              </p>
+            </div>
+          </article>
 
-            <article class="project reveal">
-              <a class="project-visual project-blue" href="#" aria-label="View Common Ground project">
-                <div class="poster-shape poster-one">COMMON</div>
-                <div class="poster-shape poster-two">GROUND</div>
-                <div class="poster-dot"></div>
-              </a>
-              <div class="project-copy">
-                <div>
-                  <p class="project-type">Brand system · 2026</p>
-                  <h3>Common Ground</h3>
-                  <p>A warm identity and digital home for a community built around shared interests.</p>
-                </div>
-                <a class="circle-link" href="#" aria-label="View Common Ground project"><span>↗</span></a>
-              </div>
-            </article>
+          <article class="practice-card reveal">
+            <div class="card-topline"><span>CODE / EXPLORATION</span><span>03</span></div>
+            <div class="code-visual" aria-hidden="true">
+              <div class="code-gutter">01<br />02<br />03<br />04<br />05<br />06</div>
+              <pre><span class="code-blue">const</span> thesis = {
+  input: <span class="code-lime">"noise"</span>,
+  method: <span class="code-lime">"curiosity"</span>,
+  output: <span class="code-lime">"clarity"</span>
+};
 
-            <article class="project reveal">
-              <a class="project-visual project-green" href="#" aria-label="View Field Notes project">
-                <div class="notes-card notes-one"><span>Field note</span><strong>Observe</strong></div>
-                <div class="notes-card notes-two"><span>Field note</span><strong>Connect</strong></div>
-                <div class="notes-card notes-three"><span>Field note</span><strong>Make</strong></div>
-              </a>
-              <div class="project-copy">
-                <div>
-                  <p class="project-type">Editorial experiment · 2025</p>
-                  <h3>Field Notes</h3>
-                  <p>A small publishing project for ideas, observations, and works in progress.</p>
-                </div>
-                <a class="circle-link" href="#" aria-label="View Field Notes project"><span>↗</span></a>
-              </div>
-            </article>
-          </div>
+build(thesis);</pre>
+              <div class="code-cursor"></div>
+            </div>
+            <div class="card-copy">
+              <h3>Digital experiments</h3>
+              <p>
+                Small, deliberate builds used to test an idea quickly, learn in public, and turn
+                curiosity into something tangible.
+              </p>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="contact" id="contact">
-        <div class="contact-inner reveal">
-          <p class="eyebrow">Have something in mind?</p>
-          <h2>Let’s make something<br /><em>worth remembering.</em></h2>
-          <a class="button button-light" href="mailto:hello@example.com">Start a conversation <span aria-hidden="true">↗</span></a>
+        <div class="contact-noise" aria-hidden="true"></div>
+        <div class="contact-copy reveal">
+          <p class="kicker">A clear line is open</p>
+          <h2>Have a difficult problem worth thinking about?</h2>
+          <a href="mailto:zhangzhirui1224@gmail.com" class="contact-link">
+            <span>Write to Jeffrey</span><i aria-hidden="true">&nearr;</i>
+          </a>
         </div>
-        <div class="contact-orbit orbit-one" aria-hidden="true"></div>
-        <div class="contact-orbit orbit-two" aria-hidden="true"></div>
+        <div class="contact-meta reveal">
+          <p>BASED IN TORONTO</p>
+          <p>WORKING ACROSS MARKETS, CODE, AND DESIGN</p>
+          <p>REPLIES WITHIN 48 HOURS</p>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Jeffrey. Built with care.</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <div>
+        <span class="footer-mark">N/</span>
+        <p>&copy; <span id="year"></span> Jeffrey</p>
       </div>
-      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      <p class="footer-note">Built from first principles. Deployed from Toronto.</p>
+      <div class="footer-links">
+        <a href="https://github.com/navyblue1" target="_blank" rel="noreferrer">GitHub &nearr;</a>
+        <a href="mailto:zhangzhirui1224@gmail.com">Email &nearr;</a>
+        <a href="#top">Top &uarr;</a>
+      </div>
     </footer>
   </body>
 </html>
