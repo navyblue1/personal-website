@@ -9,7 +9,7 @@ function setTheme(theme) {
   const nextTheme = theme === "light" ? "dark" : "light";
   themeToggle.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
   themeLabel.textContent = nextTheme === "light" ? "Light" : "Dark";
-  themeColor.setAttribute("content", theme === "light" ? "#edf3fb" : "#061225");
+  themeColor.setAttribute("content", theme === "light" ? "#edf3fb" : "#081725");
 }
 
 setTheme(savedTheme || "dark");
