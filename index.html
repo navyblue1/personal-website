@@ -225,23 +225,56 @@
         </div>
 
         <div class="practice-list">
-          <article class="practice-card reveal">
+          <article class="practice-card practice-card--featured reveal">
             <div class="card-topline"><span>QUANTITATIVE RESEARCH / GITHUB</span><span>01</span></div>
-            <div class="market-visual" aria-hidden="true">
-              <svg viewBox="0 0 700 300" preserveAspectRatio="none">
-                <path class="chart-area" d="M0,245 C55,232 72,245 114,205 C152,169 173,204 215,164 C260,121 281,154 325,114 C365,78 392,109 431,73 C475,32 512,69 551,42 C602,8 642,54 700,20 L700,300 L0,300 Z"></path>
-                <path class="chart-line" d="M0,245 C55,232 72,245 114,205 C152,169 173,204 215,164 C260,121 281,154 325,114 C365,78 392,109 431,73 C475,32 512,69 551,42 C602,8 642,54 700,20"></path>
-              </svg>
-              <div class="chart-axis"><span>09:30</span><span>12:00</span><span>16:00</span></div>
-              <span class="chart-tag">5 MIN / 3R</span>
+            <div class="research-visual">
+              <div class="research-window">
+                <span>RESEARCH WINDOW</span>
+                <strong>MAY 2026</strong>
+                <small>Yahoo Finance · 130-symbol universe · 128 returned data</small>
+              </div>
+              <div class="research-comparison" aria-label="Simulated portfolio return improved from 16.16 percent to 23.94 percent after applying the trend filter">
+                <div class="comparison-row">
+                  <span>BASE W MODEL</span>
+                  <div class="comparison-track"><i style="--result: 67.5%"></i></div>
+                  <strong>+16.16%</strong>
+                </div>
+                <div class="comparison-row is-selected">
+                  <span>+ TREND FILTER</span>
+                  <div class="comparison-track"><i style="--result: 100%"></i></div>
+                  <strong>+23.94%</strong>
+                </div>
+              </div>
+              <div class="research-stats">
+                <div><span>MAX DRAWDOWN</span><strong>-4.24%</strong></div>
+                <div><span>PORTFOLIO TRADES</span><strong>142</strong></div>
+                <div><span>QUALITY WIN RATE</span><strong>33.33%</strong></div>
+                <div><span>ENDING EQUITY</span><strong>$123,939.96</strong></div>
+              </div>
+              <p class="research-caption">Simulated from $100,000 with 20% allocation per trade and at most five open positions.</p>
             </div>
-            <div class="card-copy">
+            <div class="card-copy research-copy">
               <h3>W-Model Trading Research</h3>
-              <p>
-                A Python research workflow for detecting, optimizing, and backtesting a W-bottom
-                model on intraday equity data, including trend filters, risk rules, and a current-day scanner.
-              </p>
-              <a class="card-link" href="https://github.com/navyblue1/financial-modeling-practice-lab" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">&nearr;</span></a>
+              <p class="research-thesis">Can a simple W-bottom pattern become more useful when market context is measured before entry?</p>
+              <div class="research-method">
+                <div><span>01 / SIGNAL</span><strong>Early higher-low W on 5-minute candles</strong></div>
+                <div><span>02 / CONTEXT</span><strong>Prior 60-minute return greater than 1%</strong></div>
+                <div><span>03 / RISK</span><strong>3R target · 0.5% stop buffer · 240-minute limit</strong></div>
+              </div>
+              <div class="research-notes">
+                <div>
+                  <span>FINDING</span>
+                  <p>The pre-entry trend filter raised the simulated portfolio result from 16.16% to 23.94% and reduced maximum drawdown from 6.17% to 4.24%.</p>
+                </div>
+                <div>
+                  <span>LIMITATION</span>
+                  <p>This is an in-sample May 2026 research result using zero commissions and no slippage. It is evidence of a testing process, not a forecast or trading recommendation.</p>
+                </div>
+              </div>
+              <div class="card-actions">
+                <a class="card-link" href="https://github.com/navyblue1/financial-modeling-practice-lab" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">&nearr;</span></a>
+                <a class="card-link" href="https://github.com/navyblue1/financial-modeling-practice-lab/blob/main/data_and_testing/broad_w_trend_filter_130_5m_summary.csv" target="_blank" rel="noreferrer">Inspect result data <span aria-hidden="true">&nearr;</span></a>
+              </div>
             </div>
           </article>
 
