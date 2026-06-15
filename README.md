@@ -1,16 +1,17 @@
-# Personal website
+# Jeffrey Zhang / 张郅睿
 
-A distinctive personal portfolio for Navyblue, built with HTML, CSS, and JavaScript. It has no
-dependencies or build step and is deployed to Vercel.
+Personal website for Jeffrey Zhang, an incoming University of Toronto Engineering Science student
+interested in quantitative research, software, and entrepreneurship.
 
-## Personalize it
+Live at [navyblue1.vercel.app](https://navyblue1.vercel.app).
 
-Open `index.html` and replace:
+## Content
 
-- The introduction and profile copy
-- The three practice areas
-- The email and GitHub profile URLs
-- The page title and description in the `<head>`
+- Education and experience
+- Mathematics and entrepreneurship distinctions
+- W-Model quantitative research project
+- VolunTrack frontend work
+- Junior Achievement cork slipper venture
 
 Colors, spacing, and typography live in `styles.css`. The main palette is defined at the top using
 CSS custom properties.
