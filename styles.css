@@ -135,7 +135,7 @@ a {
 .footer-links a {
   position: relative;
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -173,7 +173,7 @@ a {
   gap: 8px;
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -192,7 +192,7 @@ a {
   gap: 6px;
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.61rem;
+  font-size: 0.68rem;
 }
 
 .language-option {
@@ -263,7 +263,7 @@ html[lang="zh-CN"] .contact-meta p {
   background: none;
   color: var(--ice);
   font-family: var(--mono);
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   cursor: pointer;
@@ -313,7 +313,7 @@ html[lang="zh-CN"] .contact-meta p {
   border-right: 1px solid var(--line);
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.55rem;
+  font-size: 0.66rem;
   letter-spacing: 0.12em;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -323,7 +323,7 @@ html[lang="zh-CN"] .contact-meta p {
   margin: 0 0 22px;
   color: var(--cyan);
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -374,7 +374,7 @@ html[lang="zh-CN"] .contact-meta p {
   padding: 15px 0;
   border-bottom: 1px solid var(--cyan);
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -417,7 +417,7 @@ html[lang="zh-CN"] .contact-meta p {
   padding: 15px 18px;
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.58rem;
+  font-size: 0.66rem;
   letter-spacing: 0.09em;
 }
 
@@ -512,11 +512,11 @@ html[lang="zh-CN"] .contact-meta p {
   right: 18px;
   bottom: 60px;
   z-index: 3;
-  max-width: 120px;
+  max-width: 155px;
   margin: 0;
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.55rem;
+  font-size: 0.66rem;
   line-height: 1.55;
   text-align: right;
   text-transform: uppercase;
@@ -547,7 +547,7 @@ html[lang="zh-CN"] .contact-meta p {
 .ticker span {
   padding: 0 25px;
   font-family: var(--mono);
-  font-size: 0.62rem;
+  font-size: 0.69rem;
   letter-spacing: 0.12em;
 }
 
@@ -582,7 +582,7 @@ html[lang="zh-CN"] .contact-meta p {
 .section-rail span {
   margin: 0;
   font-family: var(--mono);
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -647,7 +647,7 @@ html[lang="zh-CN"] .contact-meta p {
 .working-code span {
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.58rem;
+  font-size: 0.66rem;
   letter-spacing: 0.1em;
 }
 
@@ -703,7 +703,7 @@ html[lang="zh-CN"] .contact-meta p {
   margin: 0;
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.58rem;
+  font-size: 0.66rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -753,7 +753,7 @@ html[lang="zh-CN"] .contact-meta p {
 .distinction-grid span {
   color: var(--cyan);
   font-family: var(--mono);
-  font-size: 0.58rem;
+  font-size: 0.66rem;
   letter-spacing: 0.09em;
 }
 
@@ -825,7 +825,7 @@ html[lang="zh-CN"] .contact-meta p {
   border-bottom: 1px solid var(--line);
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.57rem;
+  font-size: 0.65rem;
   letter-spacing: 0.09em;
 }
 
@@ -886,7 +886,7 @@ html[lang="zh-CN"] .contact-meta p {
   justify-content: space-between;
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.5rem;
+  font-size: 0.65rem;
 }
 
 .chart-tag {
@@ -897,7 +897,7 @@ html[lang="zh-CN"] .contact-meta p {
   background: var(--lime);
   color: #081725;
   font-family: var(--mono);
-  font-size: 0.6rem;
+  font-size: 0.68rem;
 }
 
 .research-visual {
@@ -929,7 +929,7 @@ html[lang="zh-CN"] .contact-meta p {
 .research-caption {
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.56rem;
+  font-size: 0.65rem;
   letter-spacing: 0.08em;
 }
 
@@ -962,7 +962,7 @@ html[lang="zh-CN"] .contact-meta p {
 .comparison-row strong {
   color: var(--ice);
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 500;
   text-align: right;
 }
@@ -1066,7 +1066,7 @@ html[lang="zh-CN"] .contact-meta p {
   margin-left: auto;
   color: #71819d;
   font-family: var(--mono);
-  font-size: 0.45rem;
+  font-size: 0.65rem;
 }
 
 .interface-layout {
@@ -1145,7 +1145,7 @@ html[lang="zh-CN"] .contact-meta p {
 .code-gutter {
   color: #40516f;
   font-family: var(--mono);
-  font-size: 0.63rem;
+  font-size: 0.7rem;
   line-height: 2.2;
   text-align: right;
 }
@@ -1154,7 +1154,7 @@ html[lang="zh-CN"] .contact-meta p {
   margin: 0 0 0 18px;
   color: var(--ice);
   font-family: var(--mono);
-  font-size: clamp(0.62rem, 0.8vw, 0.78rem);
+  font-size: clamp(0.68rem, 0.85vw, 0.82rem);
   line-height: 2.2;
 }
 
@@ -1250,7 +1250,7 @@ html[lang="zh-CN"] .contact-meta p {
   border-bottom: 1px solid var(--cyan);
   color: var(--ice);
   font-family: var(--mono);
-  font-size: 0.63rem;
+  font-size: 0.7rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -1355,7 +1355,7 @@ html[lang="zh-CN"] .contact-meta p {
 .contact-meta p {
   margin: 0;
   font-family: var(--mono);
-  font-size: 0.56rem;
+  font-size: 0.65rem;
   letter-spacing: 0.08em;
   text-align: right;
 }
@@ -1380,7 +1380,7 @@ html[lang="zh-CN"] .contact-meta p {
   margin: 0;
   color: var(--slate);
   font-family: var(--mono);
-  font-size: 0.58rem;
+  font-size: 0.65rem;
   letter-spacing: 0.04em;
 }
 
@@ -1500,7 +1500,7 @@ html[lang="zh-CN"] .contact-meta p {
   }
 
   .language-switch {
-    font-size: 0.58rem;
+    font-size: 0.66rem;
   }
 
   .hero {
