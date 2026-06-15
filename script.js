@@ -2,22 +2,223 @@ const root = document.documentElement;
 const themeToggle = document.querySelector(".theme-toggle");
 const themeLabel = document.querySelector(".theme-label");
 const themeColor = document.querySelector('meta[name="theme-color"]');
+const languageOptions = document.querySelectorAll(".language-option");
 const savedTheme = localStorage.getItem("theme");
+const savedLanguage = localStorage.getItem("language");
+
+const translations = {
+  "Skip to content": "跳至主要内容",
+  Profile: "关于",
+  Journey: "经历",
+  Work: "项目",
+  Contact: "联系",
+  "Open to ideas": "期待新想法",
+  "I find the": "我从噪声中",
+  signal: "寻找信号",
+  "in noise.": "创造价值。",
+  "Incoming University of Toronto Engineering Science student in Toronto, exploring quantitative research and building tools that turn ideas into measurable value.":
+    "即将入读多伦多大学 Engineering Science，现居多伦多。我正在探索量化研究，并通过构建工具，把想法转化为可衡量的价值。",
+  "Explore my work": "查看我的项目",
+  "Start a conversation": "与我交流",
+  "LIVE SIGNAL FIELD": "实时信号场",
+  "Move through the field to inspect the signal.": "移动光标，观察信号变化。",
+  "U OF T ENGINEERING SCIENCE": "多大 ENGINEERING SCIENCE",
+  "QUANTITATIVE RESEARCH": "量化研究",
+  "FRONTEND DEVELOPMENT": "前端开发",
+  ENTREPRENEURSHIP: "创业实践",
+  PROFILE: "关于我",
+  "A way of working": "我的思考方式",
+  "I am a Toronto high school student preparing to study Engineering Science at U of T. I learn by turning questions into models, products, and experiments.":
+    "我是一名来自多伦多的高中生，即将进入多伦多大学 Engineering Science。我习惯把问题转化为模型、产品和实验，并在构建过程中学习。",
+  "Quantitative research appeals to me because it demands both imagination and discipline: form a hypothesis, define the assumptions, test it against data, and be honest about what fails.":
+    "量化研究吸引我，是因为它同时需要想象力与严谨性：提出假设、明确前提、用数据检验，并诚实面对失败的结果。",
+  "I am also interested in creating value independently. Whether I am writing frontend code, testing a market model, or developing a product idea, I want the result to be useful beyond the exercise itself.":
+    "我也希望能够独立创造价值。无论是编写前端代码、测试市场模型，还是发展产品创意，我都希望成果不只停留在练习，而能真正产生用途。",
+  "OPERATING PRINCIPLES": "行动原则",
+  INPUT: "起点",
+  "Ask a testable question": "提出可检验的问题",
+  PROCESS: "过程",
+  "Build and challenge the model": "构建并挑战模型",
+  OUTPUT: "结果",
+  "Create measurable value": "创造可衡量的价值",
+  JOURNEY: "成长路径",
+  "Education and experience": "教育与经历",
+  "Still early, already building": "仍在起步，已经开始构建",
+  "The path so far.": "目前走过的路。",
+  EDUCATION: "教育",
+  "University of Toronto": "多伦多大学",
+  "Incoming Engineering Science student.": "即将入读 Engineering Science。",
+  EXPERIENCE: "经历",
+  "Frontend Developer · VolunTrack": "前端开发 · VolunTrack",
+  "Contributing frontend implementation and interface work as the product develops.":
+    "随着产品持续发展，参与前端实现与界面细节的开发。",
+  "PRODUCT / WEB": "产品 / 网页",
+  "Earl Haig Secondary School": "Earl Haig 中学",
+  "Secondary education with a strong focus on mathematics, problem solving, and building.":
+    "高中阶段重点投入数学、问题解决与实践构建。",
+  DISTINCTIONS: "荣誉成绩",
+  "Selected results": "部分成果",
+  MATHEMATICS: "数学",
+  "Top 1%": "前 1%",
+  "Top 20": "加拿大前 20",
+  "Euclid Contest · Canada": "Euclid 数学竞赛",
+  "ENTREPRENEURSHIP · 2024": "创业实践 · 2024",
+  "Provincial top six": "安省前六",
+  "Junior Achievement venture creating slippers from recycled wine corks.":
+    "在 Junior Achievement 中，将回收红酒瓶塞转化为拖鞋产品创意。",
+  "SELECTED WORK": "代表项目",
+  "Projects and contributions": "项目与实践",
+  "Evidence over labels": "用成果，而不是标签说话",
+  "What I have started building.": "我已经开始构建的事物。",
+  "QUANTITATIVE RESEARCH / GITHUB": "量化研究 / GITHUB",
+  "W-Model Trading Research": "W-Model 交易研究",
+  "A Python research workflow for detecting, optimizing, and backtesting a W-bottom model on intraday equity data, including trend filters, risk rules, and a current-day scanner.":
+    "一个基于 Python 的研究流程，用于在股票日内数据中识别、优化并回测 W 底模型，涵盖趋势过滤、风险规则与当日信号扫描。",
+  "View repository": "查看代码仓库",
+  "FRONTEND DEVELOPMENT / VOLUNTRACK": "前端开发 / VOLUNTRACK",
+  "VolunTrack Frontend": "VolunTrack 前端开发",
+  "Ongoing frontend development work, contributing implementation and interface details as the product continues to develop.":
+    "持续参与前端开发，在产品迭代过程中贡献页面实现与界面细节。",
+  "ENTREPRENEURSHIP / JUNIOR ACHIEVEMENT": "创业实践 / JUNIOR ACHIEVEMENT",
+  "Cork Slipper Venture": "软木拖鞋创业项目",
+  "A Junior Achievement product concept that repurposed wine corks into slippers, developed from an unusual material insight into a provincial top-six venture in 2024.":
+    "一个将红酒瓶塞重新利用为拖鞋的 Junior Achievement 产品创意，并在 2024 年由材料洞察发展为安省前六项目。",
+  "A clear line is open": "欢迎联系",
+  "Have a problem where research and building meet?": "有一个需要研究与构建共同解决的问题？",
+  "Write to Jeffrey": "联系 Jeffrey",
+  "BASED IN TORONTO": "现居多伦多",
+  "INCOMING U OF T ENGINEERING SCIENCE": "即将入读多大 ENGINEERING SCIENCE",
+  "INTERESTED IN QUANTITATIVE RESEARCH AND NEW VENTURES": "关注量化研究与新项目",
+  "Jeffrey Zhang / 张郅睿": "Jeffrey Zhang / 张郅睿",
+  "Built from first principles. Deployed from Toronto.": "从第一性原理出发，在多伦多构建。",
+  Email: "邮箱",
+  Top: "顶部",
+};
+
+const originalTextNodes = [];
+const dynamicTextIds = new Set(["local-time", "coord-x", "coord-y", "confidence", "year"]);
+const textWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+  acceptNode(node) {
+    const parent = node.parentElement;
+    if (!parent || ["SCRIPT", "STYLE"].includes(parent.tagName) || dynamicTextIds.has(parent.id)) {
+      return NodeFilter.FILTER_REJECT;
+    }
+    return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+  },
+});
+
+while (textWalker.nextNode()) {
+  const node = textWalker.currentNode;
+  originalTextNodes.push({ node, original: node.nodeValue });
+}
+
+const pageCopy = {
+  en: {
+    title: "Jeffrey Zhang | Navyblue",
+    description:
+      "Jeffrey Zhang is an incoming University of Toronto Engineering Science student exploring quantitative research, markets, and software.",
+    ogDescription:
+      "Incoming U of T Engineering Science student building quantitative research and useful software.",
+  },
+  zh: {
+    title: "张郅睿 Jeffrey Zhang | Navyblue",
+    description:
+      "张郅睿是即将入读多伦多大学 Engineering Science 的学生，正在探索量化研究、市场与软件开发。",
+    ogDescription: "即将入读多大 Engineering Science，持续构建量化研究与实用软件。",
+  },
+};
+
+const attributeCopy = {
+  en: {
+    ".skip-link": { text: "Skip to content" },
+    ".wordmark": { "aria-label": "Navyblue, back to top" },
+    ".nav-links": { "aria-label": "Primary navigation" },
+    ".language-switch": { "aria-label": "Language" },
+    ".signal-stage": { "aria-label": "Interactive signal field" },
+    ".ticker": { "aria-label": "Areas of practice" },
+    ".working-code": { "aria-label": "Working principles" },
+  },
+  zh: {
+    ".skip-link": { text: "跳至主要内容" },
+    ".wordmark": { "aria-label": "Navyblue，返回顶部" },
+    ".nav-links": { "aria-label": "主要导航" },
+    ".language-switch": { "aria-label": "语言" },
+    ".signal-stage": { "aria-label": "互动信号场" },
+    ".ticker": { "aria-label": "关注领域" },
+    ".working-code": { "aria-label": "行动原则" },
+  },
+};
+
+function normalizeText(value) {
+  return value.replace(/\s+/g, " ").trim();
+}
+
+function updateThemeControl() {
+  const language = root.lang === "zh-CN" ? "zh" : "en";
+  const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
+  const labels = {
+    en: { light: "Light", dark: "Dark", action: `Switch to ${nextTheme} mode` },
+    zh: { light: "浅色", dark: "深色", action: `切换至${nextTheme === "light" ? "浅色" : "深色"}模式` },
+  };
+  themeLabel.textContent = labels[language][nextTheme];
+  themeToggle.setAttribute("aria-label", labels[language].action);
+}
 
 function setTheme(theme) {
   root.dataset.theme = theme;
-  const nextTheme = theme === "light" ? "dark" : "light";
-  themeToggle.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
-  themeLabel.textContent = nextTheme === "light" ? "Light" : "Dark";
   themeColor.setAttribute("content", theme === "light" ? "#edf3fb" : "#081725");
+  updateThemeControl();
+}
+
+function setLanguage(language) {
+  const isChinese = language === "zh";
+  root.lang = isChinese ? "zh-CN" : "en";
+
+  originalTextNodes.forEach(({ node, original }) => {
+    const key = normalizeText(original);
+    const leading = original.match(/^\s*/)?.[0] || "";
+    const trailing = original.match(/\s*$/)?.[0] || "";
+    node.nodeValue = isChinese && translations[key]
+      ? `${leading}${translations[key]}${trailing}`
+      : original;
+  });
+
+  const copy = pageCopy[language];
+  document.title = copy.title;
+  document.querySelector('meta[name="description"]').setAttribute("content", copy.description);
+  document.querySelector('meta[property="og:title"]').setAttribute("content", copy.title);
+  document.querySelector('meta[property="og:description"]').setAttribute("content", copy.ogDescription);
+
+  Object.entries(attributeCopy[language]).forEach(([selector, values]) => {
+    const element = document.querySelector(selector);
+    if (!element) return;
+    Object.entries(values).forEach(([attribute, value]) => {
+      if (attribute === "text") element.textContent = value;
+      else element.setAttribute(attribute, value);
+    });
+  });
+
+  languageOptions.forEach((option) => {
+    const active = option.dataset.language === language;
+    option.classList.toggle("is-active", active);
+    option.setAttribute("aria-pressed", String(active));
+  });
+
+  localStorage.setItem("language", language);
+  updateThemeControl();
 }
 
 setTheme(savedTheme || "dark");
+setLanguage(savedLanguage || (navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en"));
 
 themeToggle.addEventListener("click", () => {
   const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
   setTheme(nextTheme);
   localStorage.setItem("theme", nextTheme);
+});
+
+languageOptions.forEach((option) => {
+  option.addEventListener("click", () => setLanguage(option.dataset.language));
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();

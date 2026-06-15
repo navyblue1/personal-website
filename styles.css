@@ -164,7 +164,7 @@ a {
   display: flex;
   align-items: center;
   justify-self: end;
-  gap: 26px;
+  gap: 22px;
 }
 
 .availability {
@@ -184,6 +184,74 @@ a {
   border-radius: 50%;
   background: var(--lime);
   box-shadow: 0 0 0 4px rgba(196, 212, 174, 0.12);
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--slate);
+  font-family: var(--mono);
+  font-size: 0.61rem;
+}
+
+.language-option {
+  padding: 4px 1px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.language-option:hover,
+.language-option.is-active {
+  color: var(--lime);
+}
+
+html[lang="zh-CN"] body {
+  font-family: "Noto Sans SC", "Microsoft YaHei", var(--body);
+}
+
+html[lang="zh-CN"] .hero h1,
+html[lang="zh-CN"] .profile-statement,
+html[lang="zh-CN"] .journey-heading h2,
+html[lang="zh-CN"] .practice-heading h2,
+html[lang="zh-CN"] .contact h2,
+html[lang="zh-CN"] .timeline-main h3,
+html[lang="zh-CN"] .distinction-grid strong,
+html[lang="zh-CN"] .card-copy h3,
+html[lang="zh-CN"] .contact-link {
+  font-family: "Noto Sans SC", "Microsoft YaHei", var(--display);
+  letter-spacing: -0.04em;
+}
+
+html[lang="zh-CN"] .hero h1 {
+  line-height: 0.98;
+}
+
+html[lang="zh-CN"] .profile-statement,
+html[lang="zh-CN"] .journey-heading h2,
+html[lang="zh-CN"] .practice-heading h2,
+html[lang="zh-CN"] .contact h2 {
+  line-height: 1.08;
+}
+
+html[lang="zh-CN"] .profile-detail p,
+html[lang="zh-CN"] .timeline-main > p:last-child,
+html[lang="zh-CN"] .card-copy p {
+  line-height: 1.9;
+}
+
+html[lang="zh-CN"] .nav-links a,
+html[lang="zh-CN"] .availability,
+html[lang="zh-CN"] .kicker,
+html[lang="zh-CN"] .section-rail p,
+html[lang="zh-CN"] .timeline-type,
+html[lang="zh-CN"] .contact-meta p {
+  letter-spacing: 0.04em;
 }
 
 .theme-toggle {
@@ -1228,6 +1296,14 @@ a {
   .availability,
   .theme-label {
     display: none;
+  }
+
+  .header-meta {
+    gap: 15px;
+  }
+
+  .language-switch {
+    font-size: 0.58rem;
   }
 
   .hero {
