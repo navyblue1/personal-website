@@ -15,71 +15,71 @@ const translations = {
   Work: "项目",
   Contact: "联系",
   "Open to collaborations": "欢迎交流合作",
-  "I look for": "我在杂乱数据里",
-  signal: "找信号",
-  "in messy data.": "再用实验验证。",
-  "I am an incoming Engineering Science student at the University of Toronto. I like quantitative research because it makes ideas survive data, code, and uncomfortable assumptions.":
-    "我即将进入多伦多大学工程科学专业。现在最感兴趣的是量化研究，也喜欢把松散的想法写成代码，看看它们到底站不站得住。",
+  "I test": "用数据",
+  signals: "验证信号",
+  "with data.": "形成判断。",
+  "I am an incoming Engineering Science student at the University of Toronto, interested in quantitative research and software systems that make hypotheses testable.":
+    "我即将就读多伦多大学工程科学专业，关注量化研究，以及能够让假设被清晰检验的软件系统。",
   "Explore my work": "查看我的项目",
   "Start a conversation": "与我交流",
   "LIVE SIGNAL FIELD": "实时信号场",
   "Move through the field to inspect the signal.": "移动光标，观察信号变化。",
-  "U OF T ENGINEERING SCIENCE": "多大工程科学",
+  "U OF T ENGINEERING SCIENCE": "多伦多大学工程科学",
   "QUANTITATIVE RESEARCH": "量化研究",
   "FRONTEND DEVELOPMENT": "前端开发",
   ENTREPRENEURSHIP: "创业实践",
   ABOUT: "关于我",
-  "How I work through problems": "我怎样处理问题",
-  "I am finishing high school in Toronto and will start Engineering Science at U of T next. The pattern I keep coming back to is simple: ask a question, build a small version, test it, and keep the part that holds up.":
-    "我正在多伦多读完高中，接下来去多大读 Engineering Science。我反复发现自己喜欢一种工作方式：先问清楚问题，做一个小版本，测试，再留下经得住检验的部分。",
-  "Quantitative research appeals to me because a good-sounding idea cannot hide for very long. The assumptions have to be clear, the test has to run, and the result deserves attention even when it is not what I wanted.":
-    "我喜欢量化研究，是因为一个听起来不错的想法很快就会被数据追问。假设要写清楚，测试要跑，结果不好看也得看完。",
-  "I also like building things people can actually use: a frontend feature, a trading-model notebook, or a product idea made from a material most people would throw away.":
-    "我也喜欢做真正有人会用的东西：前端功能、交易模型笔记本，或者把别人可能会扔掉的材料做成产品。",
-  "WORKING HABITS": "工作习惯",
-  START: "开始",
-  "Ask the question plainly": "把问题问清楚",
-  TEST: "测试",
-  "Build the smallest useful model": "先做最小可用模型",
-  LEARN: "复盘",
-  "Keep what survives the data": "留下经得住数据的部分",
+  "How I approach problems": "问题处理方式",
+  "I am completing high school in Toronto and will begin Engineering Science at U of T in 2026. My work usually starts with a question, then moves into a model, prototype, or experiment that can be checked against evidence.":
+    "我正在多伦多完成高中学业，并将于 2026 年进入多伦多大学工程科学专业。我的项目通常从一个问题开始，再转化为可以用证据检验的模型、原型或实验。",
+  "Quantitative research appeals to me because it requires clear assumptions, careful testing, and honest interpretation of results.":
+    "我对量化研究感兴趣，是因为它要求明确假设、严谨测试，并如实理解结果。",
+  "I also value practical building: frontend work, research notebooks, and product ideas that turn constraints into something usable.":
+    "我也重视实际构建，包括前端开发、研究笔记本，以及把限制条件转化为可用产品的想法。",
+  WORKFLOW: "工作流程",
+  QUESTION: "问题",
+  "Define the hypothesis": "明确假设",
+  MODEL: "模型",
+  "Build a testable version": "构建可测试版本",
+  EVIDENCE: "证据",
+  "Evaluate the result": "评估结果",
   JOURNEY: "成长路径",
   "Education and experience": "教育与经历",
-  "Early, but not waiting.": "还早，但我没有等着开始。",
-  "Where I have been learning.": "我把时间花在哪里。",
+  "Education and project work": "教育与项目经历",
+  "Education, experience, and milestones.": "教育、经历与阶段成果。",
   "2026 / NEXT": "2026 / 即将开始",
   "MAY 2025 / PRESENT": "2025.05 / 至今",
   EDUCATION: "教育",
   "University of Toronto": "多伦多大学",
-  "Starting Engineering Science in 2026.": "2026 年开始 Engineering Science。",
+  "Beginning Engineering Science in 2026.": "将于 2026 年开始工程科学专业学习。",
   EXPERIENCE: "经历",
   "Frontend Developer · VolunTrack": "前端开发 · VolunTrack",
-  "Working on frontend screens and interaction details as the product changes.":
-    "随着产品变化，继续做前端页面和交互细节。",
+  "Developing frontend interfaces and interaction details as the product evolves.":
+    "随着产品迭代，参与前端界面与交互细节开发。",
   "PRODUCT / WEB": "产品 / 前端",
   "TORONTO, ON": "加拿大 · 多伦多",
   "Earl Haig Secondary School": "Earl Haig 中学",
-  "Spent high school leaning into math, contests, and projects I could build myself.":
-    "高中阶段主要投入数学、竞赛和自己动手做的项目。",
+  "Focused on mathematics, contests, and project-based learning.":
+    "高中阶段重点投入数学、竞赛和项目式学习。",
   DISTINCTIONS: "荣誉成绩",
-  "A few concrete signals": "几个具体信号",
+  "Selected results": "部分成果",
   MATHEMATICS: "数学",
   "Top 1%": "前 1%",
   "Top 20": "加拿大前 20",
   "Euclid Contest · Canada": "Euclid 数学竞赛",
   "ENTREPRENEURSHIP · 2024": "创业实践 · 2024",
   "Top six in Ontario": "安省前六",
-  "Helped develop a slipper idea using recycled wine corks; the venture placed top six in Ontario.":
-    "参与开发了一个用回收红酒瓶塞做拖鞋的想法；项目在 Junior Achievement 中进入安省前六。",
+  "Developed a Junior Achievement venture concept using recycled wine corks as the core material for slippers.":
+    "以回收红酒瓶塞为核心材料，开发 Junior Achievement 拖鞋创业项目概念。",
   "SELECTED WORK": "代表项目",
-  "Projects I can point to": "我能拿出来看的项目",
-  "A few things I have tested": "几个真的跑过的东西",
-  "Work with evidence.": "有证据的项目。",
+  "Projects and contributions": "项目与实践",
+  "Selected project work": "代表性项目",
+  "Research and building in practice.": "研究与构建实践。",
   "QUANTITATIVE RESEARCH / GITHUB": "量化研究 / GITHUB",
   "W-Model Trading Research": "W-Model 交易研究",
   "RESEARCH WINDOW": "研究窗口",
   "MAY 2026": "2026 年 5 月",
-  "Yahoo Finance · tested 130 symbols · data returned for 128": "Yahoo Finance · 测试 130 只股票 · 128 只有数据",
+  "Yahoo Finance · 130 symbols tested · 128 with available data": "Yahoo Finance · 测试 130 只股票 · 128 只获得数据",
   "BASE W MODEL": "基础 W 模型",
   "+ TREND FILTER": "+ 趋势过滤",
   "MAX DRAWDOWN": "最大回撤",
@@ -88,34 +88,34 @@ const translations = {
   "SIMULATED END VALUE": "模拟期末资金",
   "The backtest starts with a simulated $100,000. Each trade uses 20% of current equity, with at most five open positions.":
     "回测从模拟 $100,000 开始。每笔交易使用当前权益的 20%，最多同时持有五个仓位。",
-  "I wanted to know whether a W-bottom signal gets better if I check market context before entry.":
-    "我想知道：如果入场前先看市场环境，W 底信号会不会更好一点？",
+  "I tested whether adding market context before entry improves a W-bottom signal.":
+    "我测试了在入场前加入市场环境判断，是否能改善 W 底信号表现。",
   "01 / SIGNAL": "01 / 信号",
-  "Early higher-low W on 5-minute bars": "5 分钟 K 线中，第二个低点更高的早期 W 形态",
+  "Early higher-low W pattern on 5-minute bars": "5 分钟 K 线中第二个低点更高的早期 W 形态",
   "02 / CONTEXT": "02 / 环境",
-  "60-minute return above 1% before entry": "入场前 60 分钟涨幅大于 1%",
+  "60-minute pre-entry return above 1%": "入场前 60 分钟收益率大于 1%",
   "03 / RISK": "03 / 风险",
   "3R target · 0.5% stop buffer · exit after 240 minutes": "3R 止盈目标 · 0.5% 止损缓冲 · 240 分钟后离场",
   FINDING: "研究发现",
-  "With the trend filter, simulated return moved from 16.16% to 23.94%, and max drawdown moved down from 6.17% to 4.24%.":
-    "加入趋势过滤后，模拟回报从 16.16% 到 23.94%，最大回撤从 6.17% 降到 4.24%。",
+  "After adding the trend filter, simulated return increased from 16.16% to 23.94%, while maximum drawdown decreased from 6.17% to 4.24%.":
+    "加入趋势过滤后，模拟回报从 16.16% 提升至 23.94%，最大回撤从 6.17% 降至 4.24%。",
   LIMITATION: "研究局限",
-  "This is still in-sample work: the model and filter were chosen on the same May 2026 data. It also assumes no commissions and no slippage, so I treat it as process evidence, not a promise.":
-    "这仍然是样本内研究：模型和过滤条件都来自同一组 2026 年 5 月数据。结果也没有计入佣金和滑点，所以我把它当作研究过程，而不是收益承诺。",
+  "The model and filter were selected using the same May 2026 sample. Results exclude commissions and slippage, so they should be read as research evidence rather than expected future performance.":
+    "模型与过滤条件均基于同一组 2026 年 5 月样本选择。结果未计入佣金和滑点，因此应被理解为研究过程中的证据，而非对未来表现的预期。",
   "A Python research workflow for detecting, optimizing, and backtesting a W-bottom model on intraday equity data, including trend filters, risk rules, and a current-day scanner.":
     "一个基于 Python 的研究流程，用于在股票日内数据中识别、优化并回测 W 底模型，涵盖趋势过滤、风险规则与当日信号扫描。",
   "View repository": "查看代码仓库",
   "Inspect result data": "查看回测数据",
   "FRONTEND DEVELOPMENT / VOLUNTRACK": "前端开发 / VOLUNTRACK",
   "VolunTrack Frontend": "VolunTrack 前端开发",
-  "I work on frontend screens for VolunTrack as the product changes, with a close eye on clean implementation and the small details people feel before they notice.":
-    "我在 VolunTrack 做前端页面，也跟着产品变化调整交互细节。现在更关注代码是否清楚，以及那些容易被忽略的小体验。",
+  "I contribute to frontend interface development for VolunTrack, focusing on clear implementation and consistent interaction details as the product evolves.":
+    "我参与 VolunTrack 的前端界面开发，并在产品迭代中关注清晰实现和一致的交互细节。",
   "ENTREPRENEURSHIP / JUNIOR ACHIEVEMENT": "创业实践 / JUNIOR ACHIEVEMENT",
   "Cork Slipper Venture": "软木拖鞋创业项目",
-  "This started as a strange material question: could recycled wine corks become slippers? It became a Junior Achievement venture and placed top six in Ontario in 2024.":
-    "这个项目一开始只是一个有点奇怪的材料问题：回收红酒瓶塞能不能做成拖鞋？后来它成为 Junior Achievement 项目，并在 2024 年进入安省前六。",
-  "Open to good problems": "欢迎带着好问题来聊",
-  "Have a problem that needs both research and building?": "有一个问题，既需要研究，也需要动手做出来吗？",
+  "Developed a Junior Achievement venture concept using recycled wine corks as the core material for slippers; the project placed top six in Ontario in 2024.":
+    "以回收红酒瓶塞为拖鞋核心材料，开发 Junior Achievement 创业项目概念；该项目于 2024 年进入安省前六。",
+  "Open to research and project conversations": "欢迎交流研究与项目",
+  "Interested in research-driven building?": "如果你关注研究驱动的项目构建，欢迎联系。",
   "Email Jeffrey": "给 Jeffrey 发邮件",
   "BASED IN TORONTO": "现居多伦多",
   "INCOMING U OF T ENGINEERING SCIENCE": "即将就读多伦多大学工程科学专业",
@@ -148,16 +148,16 @@ const pageCopy = {
     title: "Jeffrey Zhang | Navyblue",
     canonical: "https://navyblue1.vercel.app/en",
     description:
-      "Jeffrey Zhang is an incoming U of T Engineering Science student in Toronto, working on quantitative research, frontend software, and testable project ideas.",
+      "Jeffrey Zhang is an incoming University of Toronto Engineering Science student focused on quantitative research, frontend development, and testable project work.",
     ogDescription:
-      "Incoming U of T Engineering Science student working on quantitative research, frontend software, and testable project ideas.",
+      "Incoming U of T Engineering Science student focused on quantitative research, frontend development, and testable project work.",
   },
   zh: {
     title: "张郅睿 Jeffrey Zhang | Navyblue",
     canonical: "https://navyblue1.vercel.app/zh",
     description:
-      "张郅睿即将进入多伦多大学工程科学专业，关注量化研究、前端开发和可以被验证的项目想法。",
-    ogDescription: "即将进入多伦多大学工程科学专业，关注量化研究、前端开发和可验证的项目想法。",
+      "张郅睿即将就读多伦多大学工程科学专业，关注量化研究、前端开发和可验证的项目实践。",
+    ogDescription: "即将就读多伦多大学工程科学专业，关注量化研究、前端开发和可验证的项目实践。",
   },
 };
 
@@ -170,7 +170,7 @@ const attributeCopy = {
     ".signal-stage": { "aria-label": "Interactive signal field" },
     ".research-comparison": { "aria-label": "Simulated portfolio return improved from 16.16 percent to 23.94 percent after applying the trend filter" },
     ".ticker": { "aria-label": "Areas of practice" },
-    ".working-code": { "aria-label": "Working habits" },
+    ".working-code": { "aria-label": "Workflow" },
   },
   zh: {
     ".skip-link": { text: "跳至主要内容" },
@@ -180,7 +180,7 @@ const attributeCopy = {
     ".signal-stage": { "aria-label": "互动信号场" },
     ".research-comparison": { "aria-label": "加入趋势过滤后，模拟回报从 16.16% 提升到 23.94%" },
     ".ticker": { "aria-label": "关注领域" },
-    ".working-code": { "aria-label": "工作习惯" },
+    ".working-code": { "aria-label": "工作流程" },
   },
 };
 
