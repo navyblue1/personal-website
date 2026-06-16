@@ -2,9 +2,11 @@ const root = document.documentElement;
 const themeToggle = document.querySelector(".theme-toggle");
 const themeLabel = document.querySelector(".theme-label");
 const themeColor = document.querySelector('meta[name="theme-color"]');
+const canonicalLink = document.querySelector('link[rel="canonical"]');
 const languageOptions = document.querySelectorAll(".language-option");
 const savedTheme = localStorage.getItem("theme");
 const savedLanguage = localStorage.getItem("language");
+const languagePaths = new Set(["en", "zh"]);
 
 const translations = {
   "Skip to content": "跳至主要内容",
@@ -144,6 +146,7 @@ while (textWalker.nextNode()) {
 const pageCopy = {
   en: {
     title: "Jeffrey Zhang | Navyblue",
+    canonical: "https://navyblue1.vercel.app/en",
     description:
       "Jeffrey Zhang is an incoming U of T Engineering Science student in Toronto, working on quantitative research, frontend software, and testable project ideas.",
     ogDescription:
@@ -151,6 +154,7 @@ const pageCopy = {
   },
   zh: {
     title: "张郅睿 Jeffrey Zhang | Navyblue",
+    canonical: "https://navyblue1.vercel.app/zh",
     description:
       "张郅睿即将进入多伦多大学工程科学专业，关注量化研究、前端开发和可以被验证的项目想法。",
     ogDescription: "即将进入多伦多大学工程科学专业，关注量化研究、前端开发和可验证的项目想法。",
@@ -184,6 +188,16 @@ function normalizeText(value) {
   return value.replace(/\s+/g, " ").trim();
 }
 
+function getLanguageFromPath() {
+  const firstPathPart = window.location.pathname.split("/").filter(Boolean)[0];
+  return languagePaths.has(firstPathPart) ? firstPathPart : null;
+}
+
+function buildLanguagePath(language) {
+  const hash = window.location.hash || "";
+  return `/${language}${hash}`;
+}
+
 function updateThemeControl() {
   const language = root.lang === "zh-CN" ? "zh" : "en";
   const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
@@ -201,7 +215,7 @@ function setTheme(theme) {
   updateThemeControl();
 }
 
-function setLanguage(language) {
+function setLanguage(language, { updateUrl = false } = {}) {
   const isChinese = language === "zh";
   root.lang = isChinese ? "zh-CN" : "en";
 
@@ -216,6 +230,7 @@ function setLanguage(language) {
 
   const copy = pageCopy[language];
   document.title = copy.title;
+  canonicalLink?.setAttribute("href", copy.canonical);
   document.querySelector('meta[name="description"]').setAttribute("content", copy.description);
   document.querySelector('meta[property="og:title"]').setAttribute("content", copy.title);
   document.querySelector('meta[property="og:description"]').setAttribute("content", copy.ogDescription);
@@ -232,15 +247,22 @@ function setLanguage(language) {
   languageOptions.forEach((option) => {
     const active = option.dataset.language === language;
     option.classList.toggle("is-active", active);
-    option.setAttribute("aria-pressed", String(active));
+    if (active) option.setAttribute("aria-current", "page");
+    else option.removeAttribute("aria-current");
   });
 
   localStorage.setItem("language", language);
+  if (updateUrl) {
+    const nextPath = buildLanguagePath(language);
+    if (`${window.location.pathname}${window.location.hash}` !== nextPath) {
+      window.history.pushState({ language }, "", nextPath);
+    }
+  }
   updateThemeControl();
 }
 
 setTheme(savedTheme || "dark");
-setLanguage(savedLanguage || (navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en"));
+setLanguage(getLanguageFromPath() || savedLanguage || (navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en"));
 
 themeToggle.addEventListener("click", () => {
   const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
@@ -249,7 +271,15 @@ themeToggle.addEventListener("click", () => {
 });
 
 languageOptions.forEach((option) => {
-  option.addEventListener("click", () => setLanguage(option.dataset.language));
+  option.addEventListener("click", (event) => {
+    event.preventDefault();
+    setLanguage(option.dataset.language, { updateUrl: true });
+  });
+});
+
+window.addEventListener("popstate", () => {
+  const languageFromPath = getLanguageFromPath();
+  if (languageFromPath) setLanguage(languageFromPath);
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
