@@ -1788,6 +1788,140 @@ html[lang="zh-CN"] .contact-meta p {
   transform: translate(5px, -5px);
 }
 
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 760px);
+  margin-top: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(5, 16, 26, 0.24);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(18px);
+}
+
+.social-link {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "icon text"
+    "icon status";
+  align-items: center;
+  gap: 2px 14px;
+  min-height: 112px;
+  padding: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+  isolation: isolate;
+  transition: background 200ms ease, transform 200ms ease, border-color 200ms ease;
+}
+
+.social-link:nth-child(2n) {
+  border-right: 0;
+}
+
+.social-link:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.social-link::after {
+  position: absolute;
+  inset: 12px;
+  z-index: -1;
+  border-radius: 18px;
+  background: radial-gradient(circle at 20% 20%, rgba(145, 208, 202, 0.16), transparent 58%);
+  opacity: 0;
+  content: "";
+  transition: opacity 200ms ease;
+}
+
+.social-link--active:hover {
+  background: rgba(145, 208, 202, 0.11);
+  transform: translateY(-2px);
+}
+
+.social-link--active:hover::after {
+  opacity: 1;
+}
+
+.social-link--pending {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.social-link--pending .social-status {
+  color: rgba(215, 199, 163, 0.78);
+}
+
+.social-icon {
+  grid-area: icon;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.social-icon--linkedin {
+  color: #91d0ca;
+}
+
+.social-icon--x {
+  color: #fff;
+}
+
+.social-icon--tiktok {
+  color: #b8eff0;
+  text-shadow: 1px 0 rgba(255, 72, 111, 0.65);
+}
+
+.social-icon--instagram {
+  color: #f2c7a7;
+}
+
+.social-icon--xiaohongshu {
+  color: #ffd2d2;
+}
+
+.social-text {
+  grid-area: text;
+  display: grid;
+  gap: 4px;
+}
+
+.social-text strong {
+  font-family: var(--display);
+  font-size: 1.16rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.social-text small,
+.social-status {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.social-text small {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.social-status {
+  grid-area: status;
+  color: var(--lime);
+}
+
 .contact-meta {
   display: grid;
   gap: 12px;
@@ -2232,6 +2366,23 @@ html[lang="zh-CN"] .contact-meta p {
 
   .contact h2 {
     font-size: clamp(3.7rem, 16vw, 6rem);
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+  }
+
+  .social-link,
+  .social-link:nth-child(2n),
+  .social-link:nth-last-child(-n + 2) {
+    min-height: 98px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .social-link:last-child {
+    border-bottom: 0;
   }
 
   .contact-meta p {
