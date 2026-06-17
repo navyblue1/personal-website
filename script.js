@@ -4,6 +4,7 @@ const themeLabel = document.querySelector(".theme-label");
 const themeColor = document.querySelector('meta[name="theme-color"]');
 const canonicalLink = document.querySelector('link[rel="canonical"]');
 const languageOptions = document.querySelectorAll(".language-option");
+const zhOnlyElements = document.querySelectorAll("[data-zh-only]");
 const savedTheme = localStorage.getItem("theme");
 const savedLanguage = localStorage.getItem("language");
 const languagePaths = new Set(["en", "zh"]);
@@ -195,7 +196,19 @@ function getLanguageFromPath() {
 
 function buildLanguagePath(language) {
   const hash = window.location.hash || "";
+  if (language === "en" && hash === "#challenge") return `/${language}`;
   return `/${language}${hash}`;
+}
+
+function syncLanguageVisibility(language) {
+  const showChineseOnly = language === "zh";
+  zhOnlyElements.forEach((element) => {
+    element.hidden = !showChineseOnly;
+  });
+
+  if (!showChineseOnly && window.location.hash === "#challenge") {
+    window.history.replaceState({ language }, "", window.location.pathname || "/en");
+  }
 }
 
 function updateThemeControl() {
@@ -251,6 +264,7 @@ function setLanguage(language, { updateUrl = false } = {}) {
     else option.removeAttribute("aria-current");
   });
 
+  syncLanguageVisibility(language);
   localStorage.setItem("language", language);
   if (updateUrl) {
     const nextPath = buildLanguagePath(language);
