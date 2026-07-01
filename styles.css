@@ -1681,6 +1681,12 @@ html[lang="zh-CN"] .contact-meta p {
   margin-top: 38px;
 }
 
+.challenge-video-stack {
+  display: grid;
+  align-content: start;
+  background: rgba(4, 10, 17, 0.46);
+}
+
 .challenge-video-card {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -1690,9 +1696,21 @@ html[lang="zh-CN"] .contact-meta p {
     rgba(4, 10, 17, 0.56);
 }
 
+.challenge-video-card + .challenge-video-card {
+  border-top: 1px solid rgba(121, 184, 255, 0.16);
+}
+
+.challenge-video-card--xuanheng {
+  background:
+    radial-gradient(circle at 18% 14%, rgba(103, 170, 146, 0.16), transparent 16rem),
+    linear-gradient(180deg, rgba(47, 140, 255, 0.08), rgba(7, 20, 32, 0.2)),
+    rgba(4, 10, 17, 0.62);
+}
+
 .challenge-video-top {
   display: flex;
   justify-content: space-between;
+  gap: 16px;
   padding: 0 2px 16px;
 }
 
@@ -2014,7 +2032,7 @@ html[lang="zh-CN"] .contact-meta p {
     border-bottom: 1px solid rgba(121, 184, 255, 0.16);
   }
 
-  .challenge-video-card {
+  .challenge-video-stack {
     width: min(100%, 520px);
     justify-self: center;
   }
